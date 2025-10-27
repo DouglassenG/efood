@@ -1,0 +1,13 @@
+{
+  // Configurações Globais (Remova o sublinhado aqui)
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // NOVO: Essa linha SUBSTITUI a necessidade do "auto" e habilita a detecção
+  "editor.detectIndentation": true,
+
+  // Garante que o ESLint faça correções automáticas (fixOnSave)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
