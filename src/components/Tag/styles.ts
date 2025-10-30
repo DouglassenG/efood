@@ -6,7 +6,7 @@ import { Props } from '.'
 export const TagContainer = styled.div<Props>`
   background-color: ${cores.brancoFundo};
   color: ${cores.laranja};
+  font-size: ${(props) => (props.size === 'big' ? '14px' : '12px')};
   font-weight: 700;
-  font-size: 12px;
-  padding: 6px 4px;
+  padding: ${(props) => (props.size === 'big' ? '4px 6px' : '6px 4px')};
 `
