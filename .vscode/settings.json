@@ -2,6 +2,7 @@
   // Configurações Globais (Remova o sublinhado aqui)
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.nodePath": "./node_modules",
 
   // NOVO: Essa linha SUBSTITUI a necessidade do "auto" e habilita a detecção
   "editor.detectIndentation": true,

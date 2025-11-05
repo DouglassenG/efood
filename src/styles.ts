@@ -19,10 +19,10 @@ body {
   background-color: ${cores.brancoFundo};
   color: ${cores.laranja};
 }
-`
 
-export const Container = styled.div`
+.container {
   max-width: 1024px;
   margin: 0 auto;
   width: 100%;
+}
 `
