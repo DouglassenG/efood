@@ -1,4 +1,4 @@
-import Home from './components/Home'
+import Hero from './components/Home'
 import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProductsList from './components/RestaurantsList'
@@ -8,7 +8,7 @@ const rotas = createBrowserRouter([
     path: '/',
     element: (
       <>
-        <Home />
+        <Hero />
         <ProductsList />
       </>
     )

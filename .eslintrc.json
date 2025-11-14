@@ -15,7 +15,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "C:/Users/dougl/OneDrive/programacao/efood/node_modules/eslint-plugin-prettier"
+  ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

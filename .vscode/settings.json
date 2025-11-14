@@ -1,14 +1,11 @@
 {
-  // Configurações Globais (Remova o sublinhado aqui)
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.nodePath": "./node_modules",
 
-  // NOVO: Essa linha SUBSTITUI a necessidade do "auto" e habilita a detecção
-  "editor.detectIndentation": true,
-
-  // Garante que o ESLint faça correções automáticas (fixOnSave)
+  // DESLIGAR O ESLint temporariamente para que o Prettier possa funcionar
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  }
+    "source.fixAll.eslint": "explicit" // Mantenha a linha
+  },
+  "eslint.nodePath": "./node_modules" // Mantenha este hack para tentar resolver
+  // ... outras configurações
 }

@@ -1,14 +1,14 @@
 import logo from '../../assets/images/logo.png'
 import fundo from '../../assets/images/fundo.png'
-import { Hero } from './styles'
+import { HeroContainer } from './styles'
 
-const Home = () => (
-  <Hero style={{ backgroundImage: `url(${fundo})` }}>
+const Hero = () => (
+  <HeroContainer style={{ backgroundImage: `url(${fundo})` }}>
     <img src={logo} alt="EFOOD" />
     <h2>
       Viva experiências gastronômicas <br /> no conforto da sua casa
     </h2>
-  </Hero>
+  </HeroContainer>
 )
 
-export default Home
+export default Hero
