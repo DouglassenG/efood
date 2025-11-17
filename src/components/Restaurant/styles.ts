@@ -7,33 +7,48 @@ export const Card = styled.div`
   border: 1px solid ${cores.laranja};
   width: 100%;
   margin: 48px auto;
+  position: relative;
 
   ${TagContainer} {
     margin-right: 8px;
   }
 
   .container {
-    position: relative;
     padding: 8px;
   }
 `
 export const Titulo = styled.h3`
   font-weight: bold;
-  width: 26px;
   font-size: 18px;
   display: flex;
+  line-height: 100%;
+`
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between; /* Coloca o Título na esquerda e a Nota na direita */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
   margin-top: 8px;
   margin-bottom: 16px;
+  flex-wrap: no-wrap;
+`
+
+export const NotaContainer = styled.div`
+  display: flex;
+  align-items: center;
 
   img {
     width: 21px;
     margin-left: 8px;
-    width: 21px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+  }
+
+  /* Estiliza o número da nota dentro do container */
+  ${Titulo} {
+    font-size: 18px;
+    font-weight: bold;
   }
 `
+
 export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
@@ -42,6 +57,6 @@ export const Descricao = styled.p`
 `
 export const Infos = styled.div`
   position: absolute;
-  top: 8px;
+  top: 16px;
   right: 8px;
 `

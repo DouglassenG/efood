@@ -1,7 +1,14 @@
 import Button from '../Button'
 import Tag from '../Tag'
 
-import { Card, Titulo, Descricao } from './styles'
+import {
+  Card,
+  Titulo,
+  Descricao,
+  Infos,
+  HeaderContainer,
+  NotaContainer
+} from './styles'
 import estrela from '../../assets/images/estrela.png'
 
 type Props = {
@@ -15,18 +22,22 @@ type Props = {
 const Restaurant = ({ infos, category, title, nota, image }: Props) => (
   <Card>
     <img src={image} alt={title} />
-    <Tag>{category}</Tag>
-    <div>
+    <Infos>
       {infos.map((info) => (
         <Tag key={info}>{info}</Tag>
       ))}
-    </div>
+      <Tag>{category}</Tag>
+    </Infos>
+
     <div className="container">
-      <Titulo>{title}</Titulo>
-      <Titulo>
-        {nota}
-        <img src={estrela} alt="Estrela" />
-      </Titulo>
+      <HeaderContainer>
+        <Titulo as="h3">{title}</Titulo>
+        <NotaContainer>
+          <Titulo as="span">{nota}</Titulo>
+          <img src={estrela} alt="Estrela" />
+        </NotaContainer>
+      </HeaderContainer>
+
       <Descricao>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime cumque
         laborum architecto sequi, consectetur libero deserunt explicabo sunt
