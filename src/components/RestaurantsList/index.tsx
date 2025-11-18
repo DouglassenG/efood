@@ -2,6 +2,7 @@ import Restaurant from '../Restaurant'
 import { Container, List } from './styles'
 
 import restaurante from '../../assets/images/restaurante.png'
+import restaurante_2 from '../../assets/images/restaurante_2.png'
 
 const ProductsList = () => (
   <Container>
@@ -17,37 +18,37 @@ const ProductsList = () => (
         <Restaurant
           infos={[]}
           category={'Italiana'}
-          title={''}
+          title={'La Dolce Vita Trattoria'}
           nota={4.6}
-          image={''}
+          image={restaurante_2}
         />
         <Restaurant
           infos={[]}
           category={'Italiana'}
-          title={''}
+          title={'La Dolce Vita Trattoria'}
           nota={0}
-          image={''}
+          image={restaurante_2}
         />
         <Restaurant
           infos={[]}
           category={'Italiana'}
-          title={''}
+          title={'La Dolce Vita Trattoria'}
           nota={0}
-          image={''}
+          image={restaurante_2}
         />
         <Restaurant
           infos={[]}
           category={'Italiana'}
-          title={''}
+          title={'La Dolce Vita Trattoria'}
           nota={0}
-          image={''}
+          image={restaurante_2}
         />
         <Restaurant
           infos={[]}
           category={'Italiana'}
-          title={''}
+          title={'La Dolce Vita Trattoria'}
           nota={0}
-          image={''}
+          image={restaurante_2}
         />
       </List>
     </div>
