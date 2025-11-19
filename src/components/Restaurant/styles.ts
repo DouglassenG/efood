@@ -53,6 +53,7 @@ export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-top: 16px;
+  margin-bottom: 16px;
   display: block;
 `
 export const Infos = styled.div`

@@ -1,6 +1,4 @@
-import Button from '../Button'
 import Tag from '../Tag'
-
 import {
   Card,
   Titulo,
@@ -10,6 +8,7 @@ import {
   NotaContainer
 } from './styles'
 import estrela from '../../assets/images/estrela.png'
+import Button from '../Button'
 
 type Props = {
   infos: string[]
@@ -44,7 +43,7 @@ const Restaurant = ({ infos, category, title, nota, image }: Props) => (
         nobis ipsum doloremque ad ratione facilis, unde soluta distinctio
         placeat alias rem.
       </Descricao>
-      <Button type="link" to="/restaurant" title="Saiba mais">
+      <Button type="link" to="/perfil" title="Saiba mais">
         Saiba mais
       </Button>
     </div>
