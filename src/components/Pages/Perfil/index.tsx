@@ -1,9 +1,10 @@
-import Hero from '../../Hero'
 import ProductsList from '../../RestaurantsList'
 
 import Restaurant from '../../../assets/images/restaurante.png'
 import TipoRestaurant from '../../../models/Restaurant'
-import Header from '../../Perfil'
+
+import Footer from '../../Footer'
+import Header from '../../Header'
 
 const restaurants: TipoRestaurant[] = [
   {
@@ -20,6 +21,7 @@ const Perfil = () => (
   <>
     <Header />
     <ProductsList restaurants={restaurants} />
+    <Footer />
   </>
 )
 
