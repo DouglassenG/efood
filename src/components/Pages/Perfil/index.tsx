@@ -5,6 +5,7 @@ import TipoRestaurant from '../../../models/Restaurant'
 
 import Footer from '../../Footer'
 import Header from '../../Header'
+import Product from '../../Product'
 
 const restaurants: TipoRestaurant[] = [
   {
@@ -20,6 +21,7 @@ const restaurants: TipoRestaurant[] = [
 const Perfil = () => (
   <>
     <Header />
+    <Product />
     <ProductsList restaurants={restaurants} />
     <Footer />
   </>

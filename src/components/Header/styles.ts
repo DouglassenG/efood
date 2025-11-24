@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 186px;
   display: block;
-  padding-top: 63px;
+  padding: 63px 0 68px 0;
   text-align: center;
 
   .container {
@@ -31,4 +31,11 @@ export const ContadorCarrinho = styled.span`
   color: ${cores.laranja};
   font-weight: bold;
   size: 18px;
+`
+
+export const ApresentacaoContainer = styled.div`
+  width: 100%;
+  height: 280px;
+  display: flex;
+  text-align: center;
 `
