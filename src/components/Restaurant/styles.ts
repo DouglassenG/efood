@@ -42,7 +42,6 @@ export const NotaContainer = styled.div`
     margin-left: 8px;
   }
 
-  /* Estiliza o número da nota dentro do container */
   ${Titulo} {
     font-size: 18px;
     font-weight: bold;

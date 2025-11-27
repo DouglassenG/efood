@@ -1,16 +1,19 @@
-import { CardProduct } from './styles'
+import { BotaoAdicionar, CardProduct, Descricao } from './styles'
 import image_3 from '../../assets/images/image_product.png'
 
-const Product = () => (
+type Props = {
+  image: string
+  title: string
+  description: string
+}
+
+const Product = ({ image, title, description }: Props) => (
   <CardProduct>
     <div className="container">
-      <img src={image_3} alt="" />
-      <h3>Pizza marguerita</h3>
-      <p>
-        A clássica Marguerita: molho de tomate suculento, mussarela de
-        derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.
-      </p>
-      <button>Adicionar ao carrinho</button>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <Descricao>{description}</Descricao>
+      <BotaoAdicionar>Adicionar ao carrinho</BotaoAdicionar>
     </div>
   </CardProduct>
 )

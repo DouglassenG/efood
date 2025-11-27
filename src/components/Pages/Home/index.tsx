@@ -1,9 +1,9 @@
 import Hero from '../../Hero'
-import ProductsList from '../../RestaurantsList'
 
 import Restaurant from '../../../assets/images/restaurante.png'
 import TipoRestaurant from '../../../models/Restaurant'
 import Footer from '../../Footer'
+import RestaurantsList from '../../RestaurantsList'
 
 const restaurants: TipoRestaurant[] = [
   {
@@ -59,7 +59,7 @@ const restaurants: TipoRestaurant[] = [
 const Home = () => (
   <>
     <Hero />
-    <ProductsList restaurants={restaurants} />
+    <RestaurantsList restaurants={restaurants} />
     <Footer />
   </>
 )

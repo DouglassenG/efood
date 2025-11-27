@@ -6,7 +6,7 @@ export type Props = {
   restaurants: TipoRestaurant[]
 }
 
-const ProductsList = ({ restaurants }: Props) => (
+const RestaurantsList = ({ restaurants }: Props) => (
   <Container>
     <div className="container">
       <List>
@@ -25,4 +25,4 @@ const ProductsList = ({ restaurants }: Props) => (
   </Container>
 )
 
-export default ProductsList
+export default RestaurantsList
