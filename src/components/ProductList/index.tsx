@@ -1,54 +1,23 @@
+import ProductModel from '../../models/Product'
 import Product from '../Product'
 import { Container, List } from './styles'
 
-import image_product_1 from '../../assets/images/image_product.png'
+export type Props = {
+  products: ProductModel[]
+}
 
-const ProductList = () => (
+const ProductList = ({ products }: Props) => (
   <Container>
     <div className="container">
       <List>
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
-        <Product
-          image={image_product_1}
-          title={'Pizza Marguerita'}
-          description={
-            'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-          }
-        />
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+          />
+        ))}
       </List>
     </div>
   </Container>

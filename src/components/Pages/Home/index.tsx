@@ -15,43 +15,43 @@ const restaurants: TipoRestaurant[] = [
     image: Restaurant
   },
   {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
+    id: 2,
+    infos: [],
+    category: 'Italiana',
+    title: 'La Dolce Vita Trattoria',
+    nota: 4.6,
     image: Restaurant
   },
   {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
+    id: 3,
+    infos: [],
+    category: 'Italiana',
+    title: 'La Dolce Vita Trattoria',
+    nota: 4.6,
     image: Restaurant
   },
   {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
+    id: 4,
+    infos: [],
+    category: 'Italiana',
+    title: 'La Dolce Vita Trattoria',
+    nota: 4.6,
     image: Restaurant
   },
   {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
+    id: 5,
+    infos: [],
+    category: 'Italiana',
+    title: 'La Dolce Vita Trattoria',
+    nota: 4.6,
     image: Restaurant
   },
   {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
+    id: 6,
+    infos: [],
+    category: 'Italiana',
+    title: 'La Dolce Vita Trattoria',
+    nota: 4.6,
     image: Restaurant
   }
 ]

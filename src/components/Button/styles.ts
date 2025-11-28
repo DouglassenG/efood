@@ -18,4 +18,11 @@ export const ButtonLink = styled(Link)`
   border: none;
   text-decoration: none;
   display: inline-block;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: ${cores.branco};
+    color: ${cores.laranja};
+    border: 1px solid ${cores.laranja};
+  }
 `

@@ -6,6 +6,7 @@ export const CardProduct = styled.div`
   color: ${cores.branco};
   padding: 8px;
   width: 100%;
+  box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
 
   h3 {
     margin-top: 8px;
@@ -31,4 +32,11 @@ export const BotaoAdicionar = styled.button`
   font-weight: bold;
   font-size: 14px;
   padding: 4px 0;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: ${cores.laranja};
+    color: ${cores.branco};
+    border: 1px solid ${cores.branco};
+  }
 `

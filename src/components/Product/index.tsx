@@ -1,5 +1,4 @@
 import { BotaoAdicionar, CardProduct, Descricao } from './styles'
-import image_3 from '../../assets/images/image_product.png'
 
 type Props = {
   image: string
