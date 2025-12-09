@@ -9,6 +9,7 @@ export const Card = styled.div`
   margin: 48px auto;
   position: relative;
   box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
+  display: block;
 
   ${TagContainer} {
     margin-right: 8px;

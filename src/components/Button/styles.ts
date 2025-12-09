@@ -24,5 +24,6 @@ export const ButtonLink = styled(Link)`
     background-color: ${cores.branco};
     color: ${cores.laranja};
     border: 1px solid ${cores.laranja};
+    display: inline-block;
   }
 `

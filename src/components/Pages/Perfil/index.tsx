@@ -5,6 +5,9 @@ import ProductsList from '../../ProductList'
 
 import image_product_1 from '../../../assets/images/image_product.png'
 import Product from '../../../models/Product'
+import fechar from '../../../assets/images/fechar.png'
+import image_product from '../../../assets/images/image_product.png'
+import { Modal } from './styles'
 
 const restaurants: Product[] = [
   {
@@ -55,6 +58,14 @@ const Perfil = () => (
   <>
     <Header />
     <ProductsList products={restaurants} />
+    <Modal>
+      <div className="container">
+        <header>
+          <img src={fechar} alt="Ícone de fechar" />
+        </header>
+        <img src={image_product} />
+      </div>
+    </Modal>
     <Footer />
   </>
 )
