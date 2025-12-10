@@ -11,6 +11,7 @@ export const HeroContainer = styled.div`
   h2 {
     padding-top: 138px;
     display: block;
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 36px;
   }
 `
