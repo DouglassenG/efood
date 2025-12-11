@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../../styles'
 
 export const Modal = styled.div`
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
