@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 186px;
+  height: 163px;
   display: block;
   text-align: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center center;
 `
 
 export const ApresentacaoContainer = styled.div`

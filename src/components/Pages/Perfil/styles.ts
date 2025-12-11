@@ -2,25 +2,42 @@ import styled from 'styled-components'
 import { cores } from '../../../styles'
 
 export const Modal = styled.div`
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
-  display: block;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
   color: ${cores.branco};
+
+  &.visivel {
+    display: flex;
+  }
 
   .container {
     width: 100%;
     height: 344px;
     background-color: ${cores.laranja};
   }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.73);
+  }
 `
 export const ModalContent = styled.div`
   header {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     padding: 8px;
+    z-index: 1;
 
     img {
       cursor: pointer;
