@@ -8,7 +8,6 @@ import Product from '../../../models/Product'
 import fechar from '../../../assets/images/fechar.png'
 import image_product from '../../../assets/images/image_product.png'
 import { Botao, Content, ContentContainer, Modal, ModalContent } from './styles'
-import { BotaoAdicionar } from '../../Product/styles'
 
 const restaurants: Product[] = [
   {

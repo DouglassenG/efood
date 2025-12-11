@@ -6,14 +6,6 @@ export const HeaderContainer = styled.div`
   display: block;
   text-align: center;
   justify-content: center;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 80px;
-    width: 100%;
-  }
 `
 
 export const ApresentacaoContainer = styled.div`
