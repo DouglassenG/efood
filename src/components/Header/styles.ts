@@ -14,4 +14,6 @@ export const ApresentacaoContainer = styled.div`
   height: 280px;
   display: flex;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
 `
