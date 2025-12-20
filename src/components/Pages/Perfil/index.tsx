@@ -8,7 +8,6 @@ import Product from '../../../models/Product'
 import fechar from '../../../assets/images/fechar.png'
 import image_product from '../../../assets/images/image_product.png'
 import { Botao, Content, ContentContainer, Modal, ModalContent } from './styles'
-import { useState } from 'react'
 
 const restaurants: Product[] = [
   {
@@ -56,13 +55,11 @@ const restaurants: Product[] = [
 ]
 
 const Perfil = () => {
-  const [modalEstaAberto, setModalEstaAberto] = useState(false)
-
   return (
     <>
       <Header />
       <ProductsList products={restaurants} />
-      <Modal className={modalEstaAberto ? 'visivel' : ''}>
+      <Modal>
         <ModalContent className="container">
           <header>
             <img src={fechar} alt="Ícone de fechar" />
