@@ -16,9 +16,17 @@ type Props = {
   title: string
   nota: number
   image: string
+  description: string
 }
 
-const Restaurant = ({ infos, category, title, nota, image }: Props) => (
+const Restaurant = ({
+  infos,
+  category,
+  title,
+  nota,
+  image,
+  description
+}: Props) => (
   <Card>
     <img src={image} alt={title} />
     <Infos>
@@ -37,12 +45,7 @@ const Restaurant = ({ infos, category, title, nota, image }: Props) => (
         </NotaContainer>
       </HeaderContainer>
 
-      <Descricao>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime cumque
-        laborum architecto sequi, consectetur libero deserunt explicabo sunt
-        nobis ipsum doloremque ad ratione facilis, unde soluta distinctio
-        placeat alias rem.
-      </Descricao>
+      <Descricao>{description}</Descricao>
       <Button type="link" to="/perfil" title="Saiba mais">
         Saiba mais
       </Button>

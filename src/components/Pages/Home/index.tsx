@@ -1,67 +1,42 @@
+import { useEffect, useState } from 'react'
 import Hero from '../../Hero'
-
-import Restaurant from '../../../assets/images/restaurante.png'
-import TipoRestaurant from '../../../models/Restaurant'
 import Footer from '../../Footer'
 import RestaurantsList from '../../RestaurantsList'
 
-const restaurants: TipoRestaurant[] = [
-  {
-    id: 1,
-    infos: ['Destaque da semana'],
-    category: 'Japonesa',
-    title: 'Hioki Sushi',
-    nota: 4.9,
-    image: Restaurant
-  },
-  {
-    id: 2,
-    infos: [],
-    category: 'Italiana',
-    title: 'La Dolce Vita Trattoria',
-    nota: 4.6,
-    image: Restaurant
-  },
-  {
-    id: 3,
-    infos: [],
-    category: 'Italiana',
-    title: 'La Dolce Vita Trattoria',
-    nota: 4.6,
-    image: Restaurant
-  },
-  {
-    id: 4,
-    infos: [],
-    category: 'Italiana',
-    title: 'La Dolce Vita Trattoria',
-    nota: 4.6,
-    image: Restaurant
-  },
-  {
-    id: 5,
-    infos: [],
-    category: 'Italiana',
-    title: 'La Dolce Vita Trattoria',
-    nota: 4.6,
-    image: Restaurant
-  },
-  {
-    id: 6,
-    infos: [],
-    category: 'Italiana',
-    title: 'La Dolce Vita Trattoria',
-    nota: 4.6,
-    image: Restaurant
-  }
-]
+export type Restaurante = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  cardapio: {
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao: string
+    porcao: string
+  }[]
+}
 
-const Home = () => (
-  <>
-    <Hero />
-    <RestaurantsList restaurants={restaurants} />
-    <Footer />
-  </>
-)
+const Home = () => {
+  const [restaurants, setRestaurants] = useState<Restaurante[]>([])
+
+  useEffect(() => {
+    fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setRestaurants(res))
+  }, [])
+
+  return (
+    <>
+      <Hero />
+      <RestaurantsList restaurants={restaurants} />
+      <Footer />
+    </>
+  )
+}
 
 export default Home

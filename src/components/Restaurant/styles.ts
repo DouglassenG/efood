@@ -11,6 +11,12 @@ export const Card = styled.div`
   box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
   display: block;
 
+  > img {
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+  }
+
   ${TagContainer} {
     margin-right: 8px;
   }
