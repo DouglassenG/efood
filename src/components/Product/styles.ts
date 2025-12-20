@@ -7,6 +7,8 @@ export const CardProduct = styled.div`
   padding: 8px;
   width: 100%;
   box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
 
   img {
     width: 100%;
@@ -17,19 +19,19 @@ export const CardProduct = styled.div`
   h3 {
     margin-top: 8px;
     font-size: 16px;
-    font-weight: bold 900;
+    font-weight: 900;
   }
 `
 export const Descricao = styled.p`
   font-size: 14px;
   margin-top: 8px;
   margin-bottom: 8px;
-  weight: regular 400;
+  font-weight: 400;
   line-height: 22px;
 `
 
 export const BotaoAdicionar = styled.button`
-  background-color: ${cores.branco};
+  background-color: ${cores.laranjaClaro};
   color: ${cores.laranja};
   border: none;
   cursor: pointer;
@@ -39,6 +41,7 @@ export const BotaoAdicionar = styled.button`
   font-size: 14px;
   padding: 4px 0;
   transition: all 0.5s ease;
+  margin-top: auto;
 
   &:hover {
     background-color: ${cores.laranja};

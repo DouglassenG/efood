@@ -9,12 +9,10 @@ type Props = {
 
 const Product = ({ image, title, description, aoComprar }: Props) => (
   <CardProduct>
-    <div className="container">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <Descricao>{description}</Descricao>
-      <BotaoAdicionar onClick={aoComprar}>Adicionar ao carrinho</BotaoAdicionar>
-    </div>
+    <img src={image} alt={title} />
+    <h3>{title}</h3>
+    <Descricao>{description}</Descricao>
+    <BotaoAdicionar onClick={aoComprar}>Adicionar ao carrinho</BotaoAdicionar>
   </CardProduct>
 )
 
