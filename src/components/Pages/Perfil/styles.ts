@@ -7,20 +7,10 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
-  justify-content: center;
+  z-index: 1;
+  display: flex;
   align-items: center;
-  color: ${cores.branco};
-
-  &.visivel {
-    display: flex;
-  }
-
-  .container {
-    width: 100%;
-    height: 344px;
-    background-color: ${cores.laranja};
-  }
+  justify-content: center;
 
   .overlay {
     position: absolute;
@@ -31,25 +21,36 @@ export const Modal = styled.div`
     background-color: rgba(0, 0, 0, 0.73);
   }
 `
+
 export const ModalContent = styled.div`
+  background-color: ${cores.laranja};
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  width: 100%;
+
   header {
-    position: relative;
     display: flex;
     justify-content: flex-end;
     padding: 8px;
-    z-index: 1;
 
     img {
       cursor: pointer;
+      width: 16px;
+      height: 16px;
     }
   }
 `
+
 export const Content = styled.div`
   display: flex;
-  padding: 0 32px;
-  gap: 32px;
+  padding: 0 32px 32px 32px;
+  gap: 24px;
+  color: ${cores.branco};
 
-  img {
+  > img {
     width: 280px;
     height: 280px;
     object-fit: cover;
@@ -57,25 +58,29 @@ export const Content = styled.div`
 `
 
 export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   h2 {
     font-size: 18px;
-    display: block;
+    font-weight: 900;
   }
 
   p {
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin: 16px 0;
   }
-`
-export const Botao = styled.button`
-  background-color: ${cores.branco};
-  color: ${cores.laranja};
-  justify-content: flex-start;
-  cursor: pointer;
-  border: none;
-  padding: 4px 7px;
-  font-weight: bold;
-  font-size: 14px;
+
+  button {
+    background-color: ${cores.branco};
+    color: ${cores.laranja};
+    border: none;
+    padding: 4px 7px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content;
+  }
 `

@@ -4,9 +4,10 @@ import { Container, List } from './styles'
 
 export type Props = {
   products: ProductModel[]
+  aoComprar: () => void
 }
 
-const ProductList = ({ products }: Props) => (
+const ProductList = ({ products, aoComprar }: Props) => (
   <Container>
     <div className="container">
       <List>
@@ -16,6 +17,7 @@ const ProductList = ({ products }: Props) => (
             image={product.image}
             title={product.title}
             description={product.description}
+            aoComprar={aoComprar}
           />
         ))}
       </List>
