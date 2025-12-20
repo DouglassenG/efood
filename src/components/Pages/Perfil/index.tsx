@@ -3,8 +3,6 @@ import Header from '../../Header'
 
 import ProductsList from '../../ProductList'
 
-import image_product_1 from '../../../assets/images/image_product.png'
-import Product from '../../../models/Product'
 import fechar from '../../../assets/images/fechar.png'
 import image_product from '../../../assets/images/image_product.png'
 import {
@@ -14,51 +12,6 @@ import {
   ModalContent
 } from './styles'
 import React, { useState } from 'react'
-
-const restaurants: Product[] = [
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  },
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  },
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  },
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  },
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  },
-  {
-    id: 1,
-    image: image_product_1,
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela de derretida, manjerica fresca e um toque de azeite. Sabor e simplicidade.'
-  }
-]
 
 const Perfil = () => {
   // Estado para controlar a exibição do modal
@@ -73,7 +26,7 @@ const Perfil = () => {
   return (
     <>
       <Header />
-      <ProductsList products={restaurants} aoComprar={abrirModal} />
+      <ProductsList aoComprar={abrirModal} />
 
       {modalEstaFuncionando && (
         <Modal>

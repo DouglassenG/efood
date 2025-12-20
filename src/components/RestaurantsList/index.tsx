@@ -24,6 +24,7 @@ const RestaurantsList = ({ restaurants }: Props) => {
           {restaurants.map((restaurant) => (
             <Restaurant
               key={restaurant.id}
+              id={restaurant.id}
               infos={getRestaurantTags(restaurant)}
               category={restaurant.tipo}
               title={restaurant.titulo}

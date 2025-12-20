@@ -8,6 +8,12 @@ export const CardProduct = styled.div`
   width: 100%;
   box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
 
+  img {
+    width: 100%;
+    height: 167px;
+    object-fit: cover;
+  }
+
   h3 {
     margin-top: 8px;
     font-size: 16px;

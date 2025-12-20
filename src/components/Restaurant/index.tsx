@@ -11,6 +11,7 @@ import estrela from '../../assets/images/estrela.png'
 import Button from '../Button'
 
 type Props = {
+  id: number
   infos: string[]
   category: string
   title: string
@@ -20,6 +21,7 @@ type Props = {
 }
 
 const Restaurant = ({
+  id,
   infos,
   category,
   title,
@@ -46,7 +48,7 @@ const Restaurant = ({
       </HeaderContainer>
 
       <Descricao>{description}</Descricao>
-      <Button type="link" to="/perfil" title="Saiba mais">
+      <Button type="link" to={`/perfil/${id}`} title="Saiba mais">
         Saiba mais
       </Button>
     </div>
