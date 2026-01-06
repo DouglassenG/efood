@@ -3,23 +3,15 @@ import { useParams } from 'react-router-dom'
 import Product from '../Product'
 import { Container, List } from './styles'
 import { Restaurante } from '../Pages/Home'
-
-export type Product = {
-  id: number
-  nome: string
-  descricao: string
-  foto: string
-  porcao: string
-  preco: number
-}
+import { Product as ProductModel } from '../../models/Product'
 
 export type Props = {
-  aoComprar: () => void
+  aoComprar: (produto: ProductModel) => void
 }
 
 const ProductList = ({ aoComprar }: Props) => {
   const { id } = useParams()
-  const [products, setProducts] = useState<Product[]>([])
+  const [products, setProducts] = useState<ProductModel[]>([])
 
   useEffect(() => {
     fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
@@ -43,7 +35,7 @@ const ProductList = ({ aoComprar }: Props) => {
               image={product.foto}
               title={product.nome}
               description={product.descricao}
-              aoComprar={aoComprar}
+              aoComprar={() => aoComprar(product)}
             />
           ))}
         </List>
