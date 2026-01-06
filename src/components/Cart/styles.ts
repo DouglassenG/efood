@@ -32,6 +32,21 @@ export const Sidebar = styled.aside`
   padding: 32px 8px 8px 8px;
   max-width: 360px;
   width: 100%;
+  overflow-y: auto;
+  
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${cores.brancoFundo};
+    text-align: center;
+  }
+`
+
+export const Title = styled.h3`
+  font-size: 16px;
+  font-weight: 700;
+  color: ${cores.brancoFundo};
+  margin-bottom: 16px;
 `
 
 export const Prices = styled.p`
@@ -91,4 +106,44 @@ export const CartItem = styled.li`
       height: 16px;
     }
   }
+`
+
+export const Row = styled.div`
+  display: flex;
+  column-gap: 24px;
+  align-items: flex-end;
+`
+
+export const InputGroup = styled.div`
+  flex: auto;
+  
+  max-width: auto;
+  margin-bottom: 8px;
+`
+
+export const Label = styled.label`
+  font-size: 14px;
+  font-weight: 700;
+  color: ${cores.brancoFundo};
+  display: block;
+  margin-bottom: 8px;
+`
+
+export const Input = styled.input`
+  width: 100%;
+  background-color: ${cores.laranjaClaro};
+  border: 1px solid ${cores.laranjaClaro};
+  height: 32px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4B4B4B;
+  
+  &.error {
+    border: 2px solid red;
+  }
+`
+
+export const ButtonContainer = styled.div`
+    margin-top: 16px;
 `
