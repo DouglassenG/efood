@@ -6,8 +6,6 @@
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC)
 ![Styled Components](https://img.shields.io/badge/Style-Styled_Components-db7093)
 
-> Uma aplicação web completa de delivery de restaurantes, simulando a experiência real de pedido, desde a seleção do estabelecimento até o checkout.
-
 ## 💻 Sobre o Projeto
 
 O **eFood** é uma solução Frontend desenvolvida para resolver desafios comuns em aplicações de e-commerce. O objetivo principal foi criar uma **Single Page Application (SPA)** performática e tipada, capaz de gerenciar múltiplos estados globais sem comprometer a fluidez da navegação.
