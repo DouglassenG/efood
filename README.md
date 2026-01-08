@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# 🍕 eFood - Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status](https://img.shields.io/badge/Status-Concluído-green)
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6)
+![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC)
+![Styled Components](https://img.shields.io/badge/Style-Styled_Components-db7093)
 
-## Available Scripts
+> Uma aplicação web completa de delivery de restaurantes, simulando a experiência real de pedido, desde a seleção do estabelecimento até o checkout.
 
-In the project directory, you can run:
+## 💻 Sobre o Projeto
 
-### `npm start`
+O **eFood** é uma solução Frontend desenvolvida para resolver desafios comuns em aplicações de e-commerce. O objetivo principal foi criar uma **Single Page Application (SPA)** performática e tipada, capaz de gerenciar múltiplos estados globais sem comprometer a fluidez da navegação.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O projeto se destaca pelo uso de **Redux Toolkit** para o gerenciamento do carrinho de compras e pela arquitetura de componentes reutilizáveis, demonstrando padrões de código limpo e separação de responsabilidades.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙️ Arquitetura e Tecnologias
 
-### `npm test`
+A aplicação foi construída sobre um stack moderno focado em manutenibilidade:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **[React](https://reactjs.org/):** Biblioteca principal para construção da UI.
+* **[TypeScript](https://www.typescriptlang.org/):** Utilizado para garantir a segurança de tipos e reduzir erros em tempo de execução.
+* **[Redux Toolkit](https://redux-toolkit.js.org/):** Implementado para gerenciar o estado global da aplicação, especificamente o carrinho de compras (adicionar, remover, calcular totais) e controle de modais.
+* **[Styled Components](https://styled-components.com/):** Para estilização CSS-in-JS, permitindo escopo isolado de estilos e temas dinâmicos.
+* **[React Router DOM](https://reactrouter.com/):** Para gerenciamento de rotas e navegação fluida entre a Home e o Perfil do Restaurante.
+* **[RTK Query / Fetch API](https://redux-toolkit.js.org/rtk-query/overview):** Para consumo de dados assíncronos (lista de restaurantes e cardápios).
 
-### `npm run build`
+## 🧩 Funcionalidades Principais
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Listagem de Restaurantes:** Vitrine principal com renderização dinâmica baseada em dados da API, com filtros por categoria e avaliação.
+2.  **Página de Perfil (Cardápio):** Visualização detalhada dos pratos de um restaurante específico, com modal de detalhes do produto.
+3.  **Carrinho de Compras (Sidebad):**
+    * Adição e remoção de itens em tempo real.
+    * Cálculo automático de subtotal.
+    * Persistência de estado durante a navegação.
+4.  **Checkout Multi-etapas:**
+    * Formulário de entrega com validação.
+    * Formulário de pagamento.
+    * Feedback visual de conclusão do pedido.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Estrutura do Código
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto segue uma estrutura organizada para facilitar a escalabilidade:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/
+├── components/      # Componentes UI isolados (Header, Product, Cart, etc.)
+├── container/       # Seções maiores da página (Hero, ProductList)
+├── models/          # Interfaces e Tipos do TypeScript
+├── pages/           # Rotas principais (Home, Perfil)
+├── services/        # Configuração de API (RTK Query ou Axios)
+├── store/           # Configuração do Redux (Slices e Reducers)
+├── styles/          # Estilização global e variáveis de tema
+└── utils/           # Funções auxiliares (formatação de moeda, etc.)
