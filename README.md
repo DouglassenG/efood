@@ -1,52 +1,70 @@
-# 🍕 eFood - Delivery App
+# 🍕 Efood - Delivery App
 
-![Status](https://img.shields.io/badge/Status-Concluído-green)
-![React](https://img.shields.io/badge/React-18-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6)
-![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC)
-![Styled Components](https://img.shields.io/badge/Style-Styled_Components-db7093)
+![GitHub repo size](https://img.shields.io/github/repo-size/DouglassenG/efood?style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/DouglassenG/efood?style=flat-square)
+![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_ID/deploy-status)
 
-## 💻 Sobre o Projeto
+---
 
-O **eFood** é uma solução Frontend desenvolvida para resolver desafios comuns em aplicações de e-commerce. O objetivo principal foi criar uma **Single Page Application (SPA)** performática e tipada, capaz de gerenciar múltiplos estados globais sem comprometer a fluidez da navegação.
+## 🚀 Deploy & Demonstração
 
-O projeto se destaca pelo uso de **Redux Toolkit** para o gerenciamento do carrinho de compras e pela arquitetura de componentes reutilizáveis, demonstrando padrões de código limpo e separação de responsabilidades.
+Acesse o projeto online para testar a experiência:
+### [🟢 Ver Projeto Online (Vercel/Netlify)](https://seulinkaqui.com)
 
-## ⚙️ Arquitetura e Tecnologias
+*(Dica: Se possível, adicione aqui um GIF curto de 5 segundos mostrando a navegação entre a Home e o Carrinho)*
 
-A aplicação foi construída sobre um stack moderno focado em manutenibilidade:
+![Screenshot do Projeto](./assets/cover-efood.png)
 
-* **[React](https://reactjs.org/):** Biblioteca principal para construção da UI.
-* **[TypeScript](https://www.typescriptlang.org/):** Utilizado para garantir a segurança de tipos e reduzir erros em tempo de execução.
-* **[Redux Toolkit](https://redux-toolkit.js.org/):** Implementado para gerenciar o estado global da aplicação, especificamente o carrinho de compras (adicionar, remover, calcular totais) e controle de modais.
-* **[Styled Components](https://styled-components.com/):** Para estilização CSS-in-JS, permitindo escopo isolado de estilos e temas dinâmicos.
-* **[React Router DOM](https://reactrouter.com/):** Para gerenciamento de rotas e navegação fluida entre a Home e o Perfil do Restaurante.
-* **[RTK Query / Fetch API](https://redux-toolkit.js.org/rtk-query/overview):** Para consumo de dados assíncronos (lista de restaurantes e cardápios).
+---
 
-## 🧩 Funcionalidades Principais
+## 🛠️ Tecnologias Utilizadas
 
-1.  **Listagem de Restaurantes:** Vitrine principal com renderização dinâmica baseada em dados da API, com filtros por categoria e avaliação.
-2.  **Página de Perfil (Cardápio):** Visualização detalhada dos pratos de um restaurante específico, com modal de detalhes do produto.
-3.  **Carrinho de Compras (Sidebad):**
-    * Adição e remoção de itens em tempo real.
-    * Cálculo automático de subtotal.
-    * Persistência de estado durante a navegação.
-4.  **Checkout Multi-etapas:**
-    * Formulário de entrega com validação.
-    * Formulário de pagamento.
-    * Feedback visual de conclusão do pedido.
+O projeto foi desenvolvido focando em performance e escalabilidade no frontend:
 
-## 📂 Estrutura do Código
+* **Core:** ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
+* **Gerenciamento de Estado:** ![Redux](https://img.shields.io/badge/-Redux_Toolkit-764ABC?logo=redux&logoColor=white)
+* **Estilização:** ![Styled Components](https://img.shields.io/badge/-Styled_Components-DB7093?logo=styled-components&logoColor=white)
+* **Rotas:** React Router DOM
+* **Code Quality:** Eslint, Prettier
 
-O projeto segue uma estrutura organizada para facilitar a escalabilidade:
+---
 
-```text
-src/
-├── components/      # Componentes UI isolados (Header, Product, Cart, etc.)
-├── container/       # Seções maiores da página (Hero, ProductList)
-├── models/          # Interfaces e Tipos do TypeScript
-├── pages/           # Rotas principais (Home, Perfil)
-├── services/        # Configuração de API (RTK Query ou Axios)
-├── store/           # Configuração do Redux (Slices e Reducers)
-├── styles/          # Estilização global e variáveis de tema
-└── utils/           # Funções auxiliares (formatação de moeda, etc.)
+## ✨ Funcionalidades
+
+Este projeto resolve o problema de listagem e compra de itens de restaurantes.
+
+- [x] **Listagem de Restaurantes:** Vitrine dinâmica consumindo API.
+- [x] **Página de Detalhes:** Cardápio exclusivo de cada restaurante.
+- [x] **Carrinho de Compras (Redux):** Adição e remoção de itens com cálculo automático de subtotal.
+- [x] **Checkout:** Validação de formulário de entrega e pagamento.
+- [x] **Responsividade:** Layout adaptável para Mobile, Tablet e Desktop.
+
+---
+
+## 🏗️ Arquitetura e Decisões Técnicas
+
+Durante o desenvolvimento, adotei padrões de mercado para garantir manutenibilidade:
+
+1.  **Redux Toolkit:** Utilizado para evitar *prop drilling* no gerenciamento do carrinho (Sidebar), mantendo o estado global previsível.
+2.  **Componentização:** Separação estrita entre *Components* (visuais/burros) e *Containers/Pages* (lógicos), facilitando testes unitários futuros.
+3.  **Typagem Estrita:** Uso de TypeScript para garantir a integridade dos dados vindos da API e props dos componentes.
+
+---
+
+## 🔧 Como Executar Localmente
+
+Siga os passos abaixo para rodar o projeto na sua máquina:
+
+**Pré-requisitos:** Node.js (v16 ou superior).
+
+```bash
+# 1. Clone o repositório
+git clone [https://github.com/DouglassenG/efood.git](https://github.com/DouglassenG/efood.git)
+
+# 2. Instale as dependências
+npm install
+# ou
+yarn install
+
+# 3. Execute o projeto
+npm start
