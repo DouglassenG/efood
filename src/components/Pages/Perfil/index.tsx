@@ -10,7 +10,9 @@ import { Product } from '../../../models/Product'
 import { parseToBrl } from '../../../utils'
 
 import fechar from '../../../assets/images/fechar.png'
+import apresentacao from '../../../assets/images/apresentacao.png'
 import {
+  Apresentacao,
   Content,
   ContentContainer,
   Modal,
@@ -54,6 +56,7 @@ const Perfil = () => {
   return (
     <>
       <Header />
+      <Apresentacao style={{ backgroundImage: `url(${apresentacao})` }} />
       <ProductsList aoComprar={openModal} />
 
       {modal.isVisible && modal.product && (
