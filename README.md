@@ -19,7 +19,7 @@ O principal propósito técnico deste repositório é demonstrar a capacidade de
 
 ## 🖼️ Demonstração Visual
 
-*(Se você tiver screenshots, insira aqui. Caso não tenha, remova esta linha ou adicione um GIF do fluxo de compra)*
+https://efooddouglas.vercel.app/
 ## 🛠️ Tecnologias Utilizadas
 
 A arquitetura do projeto baseia-se em uma stack moderna e amplamente utilizada no mercado:
