@@ -1,70 +1,95 @@
-# 🍕 Efood - Delivery App
+# 🍕 Efood - Plataforma de Delivery Gastronômico
 
+![GitHub license](https://img.shields.io/github/license/DouglassenG/efood?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/DouglassenG/efood?style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/DouglassenG/efood?style=flat-square)
-![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_ID/deploy-status)
+![Netlify Status](https://img.shields.io/netlify/d5e8f230-6745-4b8c-8517-5e6b72808001?style=flat-square&label=Deploy)
+
+> Uma aplicação Front-end robusta que simula a experiência completa de um app de delivery, desde a seleção de restaurantes até o checkout final.
 
 ---
 
-## 🚀 Deploy & Demonstração
-
-Acesse o projeto online para testar a experiência:
-### [🟢 Ver Projeto Online (Vercel/Netlify)](https://seulinkaqui.com)
-
-*(Dica: Se possível, adicione aqui um GIF curto de 5 segundos mostrando a navegação entre a Home e o Carrinho)*
-
-![Screenshot do Projeto](./assets/cover-efood.png)
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-O projeto foi desenvolvido focando em performance e escalabilidade no frontend:
-
-* **Core:** ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
-* **Gerenciamento de Estado:** ![Redux](https://img.shields.io/badge/-Redux_Toolkit-764ABC?logo=redux&logoColor=white)
-* **Estilização:** ![Styled Components](https://img.shields.io/badge/-Styled_Components-DB7093?logo=styled-components&logoColor=white)
-* **Rotas:** React Router DOM
-* **Code Quality:** Eslint, Prettier
+## 📑 Tabela de Conteúdos
+1. [Sobre o Projeto](#-sobre-o-projeto)
+2. [Motivação](#-motivação-e-propósito)
+3. [Demonstração Visual](#-demonstração-visual)
+4. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+5. [Pré-requisitos](#-pré-requisitos)
+6. [Instalação e Execução](#-instalação-e-execução)
+7. [Como Contribuir](#-como-contribuir)
+8. [FAQ / Solução de Problemas](#-faq--solução-de-problemas)
+9. [Autores](#-autores)
+10. [Licença](#-licença)
 
 ---
 
-## ✨ Funcionalidades
+## 💻 Sobre o Projeto
 
-Este projeto resolve o problema de listagem e compra de itens de restaurantes.
-
-- [x] **Listagem de Restaurantes:** Vitrine dinâmica consumindo API.
-- [x] **Página de Detalhes:** Cardápio exclusivo de cada restaurante.
-- [x] **Carrinho de Compras (Redux):** Adição e remoção de itens com cálculo automático de subtotal.
-- [x] **Checkout:** Validação de formulário de entrega e pagamento.
-- [x] **Responsividade:** Layout adaptável para Mobile, Tablet e Desktop.
+O **Efood** é uma SPA (Single Page Application) desenvolvida para gerenciar o fluxo de pedidos de comida. A aplicação consome uma API externa para listar restaurantes, exibir cardápios dinâmicos e gerenciar um carrinho de compras global, culminando em um formulário de entrega com validação de dados.
 
 ---
 
-## 🏗️ Arquitetura e Decisões Técnicas
+## 🎯 Motivação e Propósito
 
-Durante o desenvolvimento, adotei padrões de mercado para garantir manutenibilidade:
+Este projeto foi desenvolvido para resolver o desafio de **gerenciamento de estado complexo** no lado do cliente.
+O principal problema abordado foi: *Como manter a persistência de dados do carrinho de compras enquanto o usuário navega entre diferentes rotas e restaurantes sem perder a performance?*
 
-1.  **Redux Toolkit:** Utilizado para evitar *prop drilling* no gerenciamento do carrinho (Sidebar), mantendo o estado global previsível.
-2.  **Componentização:** Separação estrita entre *Components* (visuais/burros) e *Containers/Pages* (lógicos), facilitando testes unitários futuros.
-3.  **Typagem Estrita:** Uso de TypeScript para garantir a integridade dos dados vindos da API e props dos componentes.
+A solução foca em:
+* Arquitetura escalável usando React.
+* Centralização do estado da aplicação (Carrinho/Pedido) via Redux Toolkit.
+* Validação robusta de formulários para garantir a integridade dos dados no checkout.
 
 ---
 
-## 🔧 Como Executar Localmente
+## 📸 Demonstração Visual
 
-Siga os passos abaixo para rodar o projeto na sua máquina:
+Acesse o projeto online aqui: **[🔗 Link do Deploy na Vercel/Netlify](https://seu-link-aqui.com)**
 
-**Pré-requisitos:** Node.js (v16 ou superior).
+### Fluxo de Usuário
+*(Substitua o link abaixo por um GIF real ou imagem da sua aplicação)*
+![Demo do Efood](./assets/demo-preview.gif)
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+A stack foi escolhida pensando em performance, tipagem estática e manutenibilidade:
+
+* **Core:** React (Create React App), TypeScript
+* **Gerenciamento de Estado:** Redux Toolkit (Slices e Reducers)
+* **Roteamento:** React Router DOM v6
+* **Estilização:** Styled Components (CSS-in-JS)
+* **Requisições HTTP:** Fetch API / Axios
+* **Validação de Formulários:** Formik + Yup
+* **Qualidade de Código:** ESLint, Prettier
+
+---
+
+## ⚙ Pré-requisitos
+
+Antes de começar, verifique se você atende aos seguintes requisitos:
+* **Node.js**: Versão 16.x ou superior.
+* **Gerenciador de Pacotes**: NPM ou Yarn.
+* **Git**: Instalado e configurado.
+
+---
+
+## 🚀 Instalação e Execução
+
+Siga o passo a passo para rodar o projeto em ambiente de desenvolvimento:
 
 ```bash
 # 1. Clone o repositório
 git clone [https://github.com/DouglassenG/efood.git](https://github.com/DouglassenG/efood.git)
 
-# 2. Instale as dependências
+# 2. Entre na pasta do projeto
+cd efood
+
+# 3. Instale as dependências
 npm install
 # ou
 yarn install
 
-# 3. Execute o projeto
+# 4. Execute a aplicação
 npm start
+# ou
+yarn start
