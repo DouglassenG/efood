@@ -1,30 +1,13 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import Product from '../Product'
 import { Container, List } from './styles'
-import { Restaurante } from '../Pages/Home'
 import { Product as ProductModel } from '../../models/Product'
 
 export type Props = {
   aoComprar: (produto: ProductModel) => void
+  products: ProductModel[]
 }
 
-const ProductList = ({ aoComprar }: Props) => {
-  const { id } = useParams()
-  const [products, setProducts] = useState<ProductModel[]>([])
-
-  useEffect(() => {
-    fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res: Restaurante[]) => {
-        const restaurante = res.find((r) => r.id === Number(id))
-
-        if (restaurante) {
-          setProducts(restaurante.cardapio)
-        }
-      })
-  }, [id])
-
+const ProductList = ({ aoComprar, products }: Props) => {
   return (
     <Container>
       <div className="container">
