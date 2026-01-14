@@ -98,3 +98,5 @@ src/
 ├── store/           # Configuração do Redux Toolkit (Slices e Store)
 ├── styles/          # Estilos globais e variáveis de tema
 └── utils/           # Funções utilitárias (Formatação de moeda, validações)
+
+
