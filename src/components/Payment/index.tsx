@@ -1,11 +1,18 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import Button from '../Button'
-import { Input, InputGroup, Label, Row, ButtonContainer, Title } from '../Cart/styles'
+import {
+  Input,
+  InputGroup,
+  Label,
+  Row,
+  ButtonContainer,
+  Title
+} from '../Cart/styles'
 import { parseToBrl } from '../../utils'
 
 type Props = {
-  onNext: (data: any) => void
+  onNext: (data: unknown) => void
   onBack: () => void
   price: number
 }
@@ -44,7 +51,9 @@ const Payment = ({ onNext, onBack, price }: Props) => {
           value={formik.values.cardName}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          className={formik.errors.cardName && formik.touched.cardName ? 'error' : ''}
+          className={
+            formik.errors.cardName && formik.touched.cardName ? 'error' : ''
+          }
         />
       </InputGroup>
 
@@ -58,7 +67,11 @@ const Payment = ({ onNext, onBack, price }: Props) => {
             value={formik.values.cardNumber}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className={formik.errors.cardNumber && formik.touched.cardNumber ? 'error' : ''}
+            className={
+              formik.errors.cardNumber && formik.touched.cardNumber
+                ? 'error'
+                : ''
+            }
           />
         </InputGroup>
         <InputGroup style={{ maxWidth: '87px' }}>
@@ -85,7 +98,11 @@ const Payment = ({ onNext, onBack, price }: Props) => {
             value={formik.values.expiresMonth}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className={formik.errors.expiresMonth && formik.touched.expiresMonth ? 'error' : ''}
+            className={
+              formik.errors.expiresMonth && formik.touched.expiresMonth
+                ? 'error'
+                : ''
+            }
           />
         </InputGroup>
         <InputGroup>
@@ -97,7 +114,11 @@ const Payment = ({ onNext, onBack, price }: Props) => {
             value={formik.values.expiresYear}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className={formik.errors.expiresYear && formik.touched.expiresYear ? 'error' : ''}
+            className={
+              formik.errors.expiresYear && formik.touched.expiresYear
+                ? 'error'
+                : ''
+            }
           />
         </InputGroup>
       </Row>
