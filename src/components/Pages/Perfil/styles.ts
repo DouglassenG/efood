@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../../styles'
+import { ButtonContainer } from '../../Button/styles'
 
 export const Modal = styled.div`
   position: fixed;
@@ -18,18 +19,20 @@ export const Modal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.73);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `
 
 export const ModalContent = styled.div`
-  background-color: ${cores.laranja};
+  background-color: ${cores.branco};
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   max-width: 1024px;
   width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   header {
     display: flex;
@@ -40,6 +43,11 @@ export const ModalContent = styled.div`
       cursor: pointer;
       width: 16px;
       height: 16px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 `
@@ -48,19 +56,19 @@ export const Content = styled.div`
   display: flex;
   padding: 0 32px 32px 32px;
   gap: 24px;
-  color: ${cores.branco};
+  color: ${cores.preto};
 
   > img {
     width: 280px;
     height: 280px;
     object-fit: cover;
+    border-radius: 8px;
   }
 `
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   h2 {
     font-size: 18px;
@@ -71,16 +79,10 @@ export const ContentContainer = styled.div`
     font-size: 14px;
     line-height: 22px;
     margin: 16px 0;
+    flex-grow: 1;
   }
 
-  button {
-    background-color: ${cores.branco};
-    color: ${cores.laranja};
-    border: none;
-    padding: 4px 7px;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
+  ${ButtonContainer} {
     width: fit-content;
   }
 `
@@ -92,17 +94,7 @@ export const Apresentacao = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
-  &::after {
-    position: absolute;
-    background-color: #000;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    content: '';
-    opacity: 0.5;
-  }
+  color: ${cores.branco};
 
   .container {
     position: relative;
@@ -118,12 +110,10 @@ export const Apresentacao = styled.div`
 export const Titulo = styled.h2`
   font-size: 32px;
   font-weight: 900;
-  color: ${cores.branco};
 `
 
 export const Tipo = styled.p`
   font-size: 32px;
   font-weight: 100;
-  color: ${cores.branco};
   opacity: 0.8;
 `

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { HeaderContainer, Titulo } from './styles'
+import { HeaderContainer, NavLink, Logo, CartText } from './styles'
 import { open } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
 
@@ -20,12 +20,12 @@ const Header = () => {
     <HeaderContainer style={{ backgroundImage: `url(${fundo})` }}>
       <div className="container">
         <Link to="/">
-          <Titulo>Restaurantes</Titulo>
+          <NavLink>Restaurantes</NavLink>
         </Link>
-        <img src={logo} alt="EFOOD" />
-        <Titulo onClick={openCart} style={{ cursor: 'pointer' }}>
+        <Logo src={logo} alt="EFOOD" />
+        <CartText onClick={openCart}>
           {items.length} produto(s) no carrinho
-        </Titulo>
+        </CartText>
       </div>
     </HeaderContainer>
   )

@@ -42,7 +42,7 @@ const Restaurant = ({
       <HeaderContainer>
         <Titulo as="h3">{title}</Titulo>
         <NotaContainer>
-          <Titulo as="span">{nota}</Titulo>
+          <span>{nota}</span>
           <img src={estrela} alt="Estrela" />
         </NotaContainer>
       </HeaderContainer>

@@ -12,6 +12,7 @@ import { Product } from '../../../models/Product'
 import { parseToBrl } from '../../../utils'
 
 import fechar from '../../../assets/images/fechar.png'
+import Button from '../../Button'
 import {
   Content,
   ContentContainer,
@@ -96,9 +97,14 @@ const Perfil = () => {
                   <br />
                   Serve: {modal.product.porcao}
                 </p>
-                <button onClick={addToCart}>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  title="Adicionar ao carrinho"
+                  onClick={addToCart}
+                >
                   Adicionar ao carrinho - {parseToBrl(modal.product.preco)}
-                </button>
+                </Button>
               </ContentContainer>
             </Content>
           </ModalContent>

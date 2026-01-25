@@ -1,4 +1,5 @@
-import { BotaoAdicionar, CardProduct, Descricao } from './styles'
+import Button from '../Button'
+import { CardProduct, Descricao } from './styles'
 
 type Props = {
   image: string
@@ -12,7 +13,15 @@ const Product = ({ image, title, description, aoComprar }: Props) => (
     <img src={image} alt={title} />
     <h3>{title}</h3>
     <Descricao>{description}</Descricao>
-    <BotaoAdicionar onClick={aoComprar}>Adicionar ao carrinho</BotaoAdicionar>
+    <Button
+      type="button"
+      variant="secondary"
+      title="Adicionar ao carrinho"
+      onClick={aoComprar}
+      fullWidth
+    >
+      Adicionar ao carrinho
+    </Button>
   </CardProduct>
 )
 

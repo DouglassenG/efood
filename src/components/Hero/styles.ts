@@ -1,19 +1,24 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const HeroContainer = styled.div`
   width: 100%;
   height: 360px;
-  display: block;
-  padding-top: 64px;
-  height: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0;
   text-align: center;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
 
   h2 {
-    padding-top: 138px;
-    display: block;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 36px;
+    color: ${cores.preto};
+    max-width: 540px;
+    line-height: 1.2;
   }
 `

@@ -1,10 +1,15 @@
-import { FooterContainer } from './styles'
-import footer from '../../assets/images/footer.png'
+import { FooterContainer, CopyrightText } from './styles'
+import logo from '../../assets/images/logo.png'
 
 const Footer = () => (
-  <FooterContainer
-    style={{ backgroundImage: `url(${footer})` }}
-  ></FooterContainer>
+  <FooterContainer>
+    <img src={logo} alt="EFOOD" />
+    <CopyrightText>
+      A E-Food é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.
+    </CopyrightText>
+  </FooterContainer>
 )
 
 export default Footer

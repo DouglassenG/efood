@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { cores } from '../../styles'
 
@@ -7,37 +7,39 @@ export type StyledButtonProps = {
   $fullWidth?: boolean
 }
 
-export const ButtonContainer = styled.button<StyledButtonProps>`
+const buttonStyles = css<StyledButtonProps>`
   background-color: ${(props) =>
-    props.$variant === 'primary' ? cores.laranja : cores.brancoFundo};
+    props.$variant === 'primary' ? cores.laranja : cores.laranjaClaro};
   color: ${(props) =>
     props.$variant === 'primary' ? cores.brancoFundo : cores.laranja};
   font-weight: bold;
   font-size: 14px;
-  padding: 4px 6px;
-  width: ${(props) => (props.$fullWidth ? '100%' : 'auto')};
-  cursor: pointer;
+  padding: 8px 16px;
   border: none;
-`
-export const ButtonLink = styled(Link)<StyledButtonProps>`
-  background-color: ${(props) =>
-    props.$variant === 'primary' ? cores.laranja : cores.brancoFundo};
-  color: ${(props) =>
-    props.$variant === 'primary' ? cores.brancoFundo : cores.laranja};
-  font-weight: bold;
-  font-size: 14px;
-  padding: 4px 6px;
-  border: none;
+  border-radius: 8px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.5s ease;
   width: ${(props) => (props.$fullWidth ? '100%' : 'auto')};
   text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: ${(props) =>
-      props.$variant === 'primary' ? cores.brancoFundo : cores.laranja};
+      props.$variant === 'primary' ? cores.laranjaClaro : cores.laranja};
     color: ${(props) =>
       props.$variant === 'primary' ? cores.laranja : cores.brancoFundo};
   }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+`
+
+export const ButtonContainer = styled.button<StyledButtonProps>`
+  ${buttonStyles}
+`
+export const ButtonLink = styled(Link)<StyledButtonProps>`
+  ${buttonStyles}
 `

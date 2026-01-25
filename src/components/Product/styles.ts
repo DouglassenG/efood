@@ -2,50 +2,40 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const CardProduct = styled.div`
-  background-color: ${cores.laranja};
-  color: ${cores.branco};
+  background-color: ${cores.branco};
+  border: 1px solid ${cores.cinzaClaro};
+  border-radius: 8px;
   padding: 8px;
   width: 100%;
-  box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
 
   img {
     width: 100%;
     height: 167px;
     object-fit: cover;
+    border-radius: 8px 8px 0 0;
   }
 
   h3 {
-    margin-top: 8px;
+    margin: 8px 0;
     font-size: 16px;
     font-weight: 900;
+    color: ${cores.preto};
   }
 `
 export const Descricao = styled.p`
   font-size: 14px;
-  margin-top: 8px;
   margin-bottom: 8px;
   font-weight: 400;
   line-height: 22px;
-`
-
-export const BotaoAdicionar = styled.button`
-  background-color: ${cores.laranjaClaro};
-  color: ${cores.laranja};
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  height: 24px;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 4px 0;
-  transition: all 0.5s ease;
-  margin-top: auto;
-
-  &:hover {
-    background-color: ${cores.laranja};
-    color: ${cores.branco};
-    border: 1px solid ${cores.branco};
-  }
+  color: ${cores.cinza};
+  flex-grow: 1;
 `

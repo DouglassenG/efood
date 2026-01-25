@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   branco: '#FFF',
+  preto: '#333',
+  cinza: '#888',
+  cinzaClaro: '#DDD',
   brancoFundo: '#FFF8F2',
   laranja: '#E66767',
   laranjaClaro: '#FFEBD9'
@@ -17,7 +20,7 @@ export const GlobalCss = createGlobalStyle`
 
 body {
   background-color: ${cores.brancoFundo};
-  color: ${cores.laranja};
+  color: ${cores.preto};
 }
 
 .container {

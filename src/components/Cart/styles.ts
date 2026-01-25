@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { ButtonContainer as StyledButtonContainer } from '../Button/styles'
 
 export const Overlay = styled.div`
   position: fixed;
@@ -7,8 +8,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
 `
 
 export const CartContainer = styled.div`
@@ -27,42 +27,55 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.laranja};
+  background-color: ${cores.branco};
   z-index: 1;
-  padding: 32px 8px 8px 8px;
+  padding: 32px 16px;
   max-width: 360px;
   width: 100%;
   overflow-y: auto;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.15);
   
+  &.is-open > & {
+    transform: translateX(0);
+  }
+
   .empty-text {
     font-size: 14px;
     line-height: 22px;
-    color: ${cores.brancoFundo};
+    color: ${cores.preto};
     text-align: center;
+  }
+
+  ${StyledButtonContainer} {
+    background-color: ${cores.laranja};
+    color: ${cores.brancoFundo};
+
+    &:hover {
+      background-color: ${cores.laranjaClaro};
+      color: ${cores.laranja};
+    }
   }
 `
 
-export const Title = styled.h3`
-  font-size: 16px;
-  font-weight: 700;
-  color: ${cores.brancoFundo};
-  margin-bottom: 16px;
-`
-
 export const Prices = styled.p`
-  font-weight: 700;
+  font-weight: bold;
   font-size: 14px;
-  color: ${cores.brancoFundo};
+  color: ${cores.preto};
   margin-top: 40px;
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
+
+  span {
+    color: ${cores.cinza};
+  }
 `
 
 export const CartItem = styled.li`
   display: flex;
-  background-color: ${cores.laranjaClaro};
-  padding: 8px 8px 12px 8px;
+  background-color: ${cores.brancoFundo};
+  padding: 8px;
+  border-radius: 8px;
   position: relative;
   margin-bottom: 16px;
 
@@ -71,24 +84,24 @@ export const CartItem = styled.li`
     width: 80px;
     object-fit: cover;
     margin-right: 8px;
+    border-radius: 8px;
   }
 
   div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   h3 {
-    color: ${cores.laranja};
+    color: ${cores.preto};
     font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 16px;
+    font-size: 16px;
   }
 
   span {
     display: block;
-    color: ${cores.laranja};
+    color: ${cores.cinza};
     font-weight: 400;
     font-size: 14px;
   }
@@ -100,12 +113,24 @@ export const CartItem = styled.li`
     bottom: 8px;
     right: 8px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     img {
       width: 16px;
       height: 16px;
     }
   }
+`
+// Styles for Checkout Forms (Delivery, Payment)
+export const Title = styled.h3`
+  font-size: 16px;
+  font-weight: bold;
+  color: ${cores.preto};
+  margin-bottom: 16px;
 `
 
 export const Row = styled.div`
@@ -116,34 +141,49 @@ export const Row = styled.div`
 
 export const InputGroup = styled.div`
   flex: auto;
-  
-  max-width: auto;
   margin-bottom: 8px;
 `
 
 export const Label = styled.label`
   font-size: 14px;
-  font-weight: 700;
-  color: ${cores.brancoFundo};
+  font-weight: bold;
+  color: ${cores.preto};
   display: block;
   margin-bottom: 8px;
 `
 
 export const Input = styled.input`
   width: 100%;
-  background-color: ${cores.laranjaClaro};
-  border: 1px solid ${cores.laranjaClaro};
+  background-color: ${cores.brancoFundo};
+  border: 1px solid ${cores.cinzaClaro};
+  border-radius: 8px;
   height: 32px;
   padding: 0 8px;
   font-size: 14px;
-  font-weight: 700;
-  color: #4B4B4B;
-  
+  color: ${cores.preto};
+  transition: border 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${cores.preto};
+  }
+
   &.error {
-    border: 2px solid red;
+    border-color: red;
+    background-color: #fff0f0;
   }
 `
 
 export const ButtonContainer = styled.div`
-    margin-top: 16px;
+  margin-top: 24px;
+
+  button {
+    margin-bottom: 8px;
+  }
+`
+export const ConfirmationMessage = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  color: ${cores.preto};
+  margin-bottom: 24px;
 `
