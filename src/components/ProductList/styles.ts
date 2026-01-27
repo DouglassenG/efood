@@ -1,7 +1,16 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../utils/breakpoints'
 
 export const Container = styled.section`
   padding: 80px 0;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    padding: 80px 24px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 40px 24px;
+  }
 `
 
 export const List = styled.ul`
@@ -10,4 +19,12 @@ export const List = styled.ul`
   column-gap: 32px;
   row-gap: 32px;
   list-style: none;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `

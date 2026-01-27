@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { breakpoints } from '../../utils/breakpoints'
 import { ButtonContainer as StyledButtonContainer } from '../Button/styles'
 
 export const Overlay = styled.div`
@@ -34,7 +35,7 @@ export const Sidebar = styled.aside`
   width: 100%;
   overflow-y: auto;
   box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.15);
-  
+
   &.is-open > & {
     transform: translateX(0);
   }
@@ -54,6 +55,10 @@ export const Sidebar = styled.aside`
       background-color: ${cores.laranjaClaro};
       color: ${cores.laranja};
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 90%;
   }
 `
 
@@ -137,6 +142,16 @@ export const Row = styled.div`
   display: flex;
   column-gap: 24px;
   align-items: flex-end;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 8px;
+
+    > div {
+      max-width: 100% !important; /* !important to override inline style */
+    }
+  }
 `
 
 export const InputGroup = styled.div`

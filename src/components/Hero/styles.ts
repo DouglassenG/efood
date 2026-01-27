@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { breakpoints } from '../../utils/breakpoints'
 
 export const HeroContainer = styled.div`
   width: 100%;
@@ -20,5 +21,15 @@ export const HeroContainer = styled.div`
     color: ${cores.preto};
     max-width: 540px;
     line-height: 1.2;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      font-size: 28px;
+      padding: 0 24px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: auto;
+    padding: 40px 0;
   }
 `

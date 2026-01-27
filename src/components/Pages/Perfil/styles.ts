@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../../styles'
+import { breakpoints } from '../../../utils/breakpoints'
 import { ButtonContainer } from '../../Button/styles'
 
 export const Modal = styled.div`
@@ -34,6 +35,11 @@ export const ModalContent = styled.div`
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
+  @media (max-width: ${breakpoints.tablet}) {
+    margin: 0 24px;
+    max-width: 90%;
+  }
+
   header {
     display: flex;
     justify-content: flex-end;
@@ -64,6 +70,17 @@ export const Content = styled.div`
     object-fit: cover;
     border-radius: 8px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    padding: 0 16px 16px;
+    gap: 16px;
+
+    > img {
+      width: 100%;
+      height: 180px;
+    }
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -84,6 +101,11 @@ export const ContentContainer = styled.div`
 
   ${ButtonContainer} {
     width: fit-content;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 100%;
+      text-align: center;
+    }
   }
 `
 
@@ -104,16 +126,36 @@ export const Apresentacao = styled.div`
     justify-content: space-between;
     height: 100%;
     padding: 32px 0;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      padding: 32px 24px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 200px;
+
+    .container {
+      padding: 24px;
+    }
   }
 `
 
 export const Titulo = styled.h2`
   font-size: 32px;
   font-weight: 900;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
+  }
 `
 
 export const Tipo = styled.p`
   font-size: 32px;
   font-weight: 100;
   opacity: 0.8;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
+  }
 `
