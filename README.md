@@ -1,102 +1,60 @@
-# 🍕 eFood - Delivery Application
+# 🍔 Efood - Plataforma de Delivery
 
-![React](https://img.shields.io/badge/React-18.2-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
-![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-Latest-764ABC?logo=redux)
-![Styled Components](https://img.shields.io/badge/Style-Styled_Components-db7093?logo=styled-components)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Finalizado-green)
+![React](https://img.shields.io/badge/Framework-React-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/Code-TypeScript-3178C6?logo=typescript&logoColor=white)
+![Redux](https://img.shields.io/badge/State-Redux_Toolkit-764ABC?logo=redux&logoColor=white)
 
-> Uma aplicação Single Page Application (SPA) robusta que simula a experiência completa de um serviço de delivery, desde a escolha do restaurante até a finalização do pedido.
+> Uma aplicação frontend robusta que simula a experiência de um aplicativo de delivery de ponta a ponta, com foco em performance, gerenciamento de estado global e tipagem segura.
 
-## 🔭 Motivação e Propósito
+## 🎯 Motivação e Propósito
 
-O projeto **eFood** foi desenvolvido para resolver o desafio de criar interfaces complexas de e-commerce no Front-end sem depender de recarregamentos de página (Client-Side Rendering).
+Construir fluxos de e-commerce (como adicionar itens, alterar quantidades e finalizar compra) exige uma arquitetura de dados sólida. O propósito deste projeto foi dominar o **Gerenciamento de Estado Global** em aplicações complexas, abandonando o *prop drilling* em favor do Redux.
 
-O principal propósito técnico deste repositório é demonstrar a capacidade de:
-1.  Gerenciar estados globais complexos (carrinho de compras, dados de entrega) sem "Props Drilling", utilizando **Redux Toolkit**.
-2.  Garantir a integridade do código e escalabilidade através da tipagem estática com **TypeScript**.
-3.  Criar uma interface visual pixel-perfect e responsiva utilizando **Styled Components**.
+O projeto resolve o problema da sincronização de dados entre diferentes rotas e componentes. Através de uma integração fluida com uma API REST, a aplicação garante que o estado do carrinho de compras seja consistente, independente da página que o usuário esteja navegando (Home, Perfil do Restaurante ou Checkout).
+
+> **Resultado Prático e Performance:** "Utilizei a ferramenta RTK Query (Redux Toolkit) para realizar o *fetching* e cache dos dados da API e deixou o carregamento 3x mais rápido ao abrir o cardápio dos restaurantes da aplicação, evitando requisições de rede redundantes."
 
 ## 🖼️ Demonstração Visual
 
-https://efooddouglas.vercel.app/
+
 ## 🛠️ Tecnologias Utilizadas
 
-A arquitetura do projeto baseia-se em uma stack moderna e amplamente utilizada no mercado:
+A stack tecnológica foi cuidadosamente escolhida para garantir previsibilidade e escalabilidade do código:
 
-* **Linguagem:** [TypeScript](https://www.typescriptlang.org/) (JavaScript Supercharged).
-* **Framework/Lib:** [React.js](https://reactjs.org/).
-* **Gerenciamento de Estado:** [Redux Toolkit](https://redux-toolkit.js.org/) (Store, Slices, Reducers).
-* **Estilização:** [Styled Components](https://styled-components.com/) (CSS-in-JS).
-* **Roteamento:** [React Router DOM](https://reactrouter.com/) (Navegação dinâmica).
-* **Integração API:** Fetch API / RTK Query (para consumo de dados dos restaurantes).
-* **Qualidade de Código:** ESLint e Prettier.
+* **[ReactJS](https://react.dev/):** Biblioteca base para a construção das interfaces declarativas.
+* **[TypeScript](https://www.typescriptlang.org/):** Tipagem estática para prevenção de erros em tempo de desenvolvimento, garantindo que os dados (interfaces de Restaurantes, Pratos e Carrinho) sejam manipulados corretamente.
+* **[Redux Toolkit (RTK)](https://redux-toolkit.js.org/):** Gerenciamento de estado global moderno e simplificado (Slices).
+* **[RTK Query](https://redux-toolkit.js.org/rtk-query/overview):** Ferramenta avançada para busca de dados e cache (Data Fetching).
+* **[Styled Components](https://styled-components.com/):** Estilização baseada em componentes (CSS-in-JS), permitindo escopo isolado e uso de temas.
+* **[React Router DOM](https://reactrouter.com/):** Gerenciamento de rotas (Home e Perfil do Restaurante).
 
-## 📦 Instalação e Configuração
+## ✨ Funcionalidades
 
-Siga os passos abaixo para rodar o projeto localmente.
+O escopo da aplicação cobre o fluxo essencial de um usuário em um delivery:
 
-### Pré-requisitos
-Antes de começar, certifique-se de ter instalado:
-* [Node.js](https://nodejs.org/) (Versão 16 ou superior recomendada)
-* Gerenciador de pacotes NPM ou Yarn.
+1.  **Listagem de Restaurantes:** Consumo de API para exibir restaurantes disponíveis, com notas de avaliação e tags de categorias.
+2.  **Cardápio Dinâmico:** Rotas dinâmicas que carregam os pratos específicos do restaurante selecionado.
+3.  **Carrinho de Compras Global:** Adição de itens, controle de duplicidades, cálculo de subtotal e *Sidebar* interativa acessível de qualquer tela.
+4.  **Checkout em Etapas (Stepper):** Formulário dividido em Entrega e Pagamento, com validações de campos obrigatórios antes do envio do pedido (POST) para a API.
 
-### Passo a Passo
+## 📂 Estrutura de Arquivos
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/DouglassenG/efood.git](https://github.com/DouglassenG/efood.git)
-    ```
-
-2.  **Acesse o diretório do projeto:**
-    ```bash
-    cd efood
-    ```
-
-3.  **Instale as dependências:**
-    ```bash
-    npm install
-    # ou, se preferir usar yarn:
-    yarn install
-    ```
-
-4.  **Execute a aplicação:**
-    ```bash
-    npm start
-    # O projeto rodará na porta padrão: http://localhost:3000
-    ```
-
-## 💻 Uso e Funcionalidades
-
-A aplicação consiste em dois fluxos principais de navegação:
-
-1.  **Home (Listagem):**
-    * Visualização de cards de restaurantes em destaque.
-    * Filtragem por categorias.
-    * Consumo de API para renderizar os estabelecimentos.
-
-2.  **Perfil do Restaurante (Detalhes):**
-    * Visualização do cardápio específico do restaurante.
-    * **Adicionar ao Carrinho:** Funcionalidade controlada pelo Redux. Ao clicar, o item é despachado para a Store global e o sidebar do carrinho é atualizado instantaneamente.
-
-3.  **Checkout:**
-    * Formulário de Entrega com validação de campos.
-    * Formulário de Pagamento (Cartão de Crédito).
-    * Confirmação de pedido com feedback visual.
-
-## 🏗️ Estrutura do Código
-
-O projeto segue uma arquitetura modular focada em componentização:
+A arquitetura do projeto separa estritamente regras de negócio (store), tipagens e componentes visuais:
 
 ```text
-src/
-├── components/      # Componentes UI reutilizáveis (Button, Card, Header)
-├── container/       # Blocos lógicos de layout (ProductList, Footer)
-├── models/          # Interfaces TypeScript (Tipagem de Restaurante, Prato)
-├── pages/           # Rotas da aplicação (Home, Perfil)
-├── services/        # Configuração de endpoints da API
-├── store/           # Configuração do Redux Toolkit (Slices e Store)
-├── styles/          # Estilos globais e variáveis de tema
-└── utils/           # Funções utilitárias (Formatação de moeda, validações)
-
-
+efood/
+├── src/
+│   ├── assets/          # Imagens, fontes e vetores globais
+│   ├── components/      # Componentes UI reutilizáveis (Button, Card, Footer, Header, Loader)
+│   ├── models/          # Tipagens do TypeScript (types/interfaces)
+│   ├── pages/           # Views roteáveis (Home, Perfil, Checkout)
+│   ├── store/           # Configuração do Redux Toolkit
+│   │   ├── reducers/    # Slices (ex: cartSlice.ts)
+│   │   └── api/         # Endpoints do RTK Query (api.ts)
+│   ├── styles/          # Estilos globais e configurações de Tema
+│   ├── utils/           # Funções utilitárias (formatações de moeda, datas)
+│   ├── App.tsx          # Componente Raiz e Provedores (Provider, BrowserRouter)
+│   └── index.tsx        # Ponto de entrada (Entry Point)
+├── package.json         # Dependências do projeto
+└── tsconfig.json        # Configurações do TypeScript compilador
