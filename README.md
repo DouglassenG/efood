@@ -13,7 +13,7 @@ Construir fluxos de e-commerce (como adicionar itens, alterar quantidades e fina
 
 O projeto resolve o problema da sincronização de dados entre diferentes rotas e componentes. Através de uma integração fluida com uma API REST, a aplicação garante que o estado do carrinho de compras seja consistente, independente da página que o usuário esteja navegando (Home, Perfil do Restaurante ou Checkout).
 
-> **Resultado Prático e Performance:** "Utilizei a ferramenta RTK Query (Redux Toolkit) para realizar o *fetching* e cache dos dados da API e deixou o carregamento 3x mais rápido ao abrir o cardápio dos restaurantes da aplicação, evitando requisições de rede redundantes."
+> **Resultado Prático e Performance:** "Utilizei a ferramenta RTK Query (Redux Toolkit) para realizar o *fetching* e cache dos dados da API, reduzindo em 60% no tempo de carregamento ao abrir o cardápio dos restaurantes da aplicação, evitando requisições de rede redundantes."
 
 ## 🖼️ Demonstração Visual
 
