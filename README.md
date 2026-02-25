@@ -17,6 +17,7 @@ O projeto resolve o problema da sincronização de dados entre diferentes rotas 
 
 ## 🖼️ Demonstração Visual
 
+https://efood-green-xi.vercel.app/
 
 ## 🛠️ Tecnologias Utilizadas
 
