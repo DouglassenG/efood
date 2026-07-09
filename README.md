@@ -1,11 +1,6 @@
 # 🍔 Efood - Plataforma de Delivery
 
-![Status](https://img.shields.io/badge/Status-Finalizado-green)
-![React](https://img.shields.io/badge/Framework-React-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/Code-TypeScript-3178C6?logo=typescript&logoColor=white)
-![Redux](https://img.shields.io/badge/State-Redux_Toolkit-764ABC?logo=redux&logoColor=white)
-
-> Uma aplicação frontend robusta que simula a experiência de um aplicativo de delivery de ponta a ponta, com foco em performance, gerenciamento de estado global e tipagem segura.
+Uma aplicação frontend robusta que simula a experiência de um aplicativo de delivery de ponta a ponta, com foco em performance, gerenciamento de estado global e tipagem segura.
 
 ## 🎯 Motivação e Propósito
 
@@ -29,6 +24,7 @@ A stack tecnológica foi cuidadosamente escolhida para garantir previsibilidade 
 * **[RTK Query](https://redux-toolkit.js.org/rtk-query/overview):** Ferramenta avançada para busca de dados e cache (Data Fetching).
 * **[Styled Components](https://styled-components.com/):** Estilização baseada em componentes (CSS-in-JS), permitindo escopo isolado e uso de temas.
 * **[React Router DOM](https://reactrouter.com/):** Gerenciamento de rotas (Home e Perfil do Restaurante).
+* **[Cypress](https://www.cypress.io/):** Testes end-to-end (E2E), simulando a jornada real do usuário do início ao fim.
 
 ## ✨ Funcionalidades
 
@@ -38,6 +34,10 @@ O escopo da aplicação cobre o fluxo essencial de um usuário em um delivery:
 2.  **Cardápio Dinâmico:** Rotas dinâmicas que carregam os pratos específicos do restaurante selecionado.
 3.  **Carrinho de Compras Global:** Adição de itens, controle de duplicidades, cálculo de subtotal e *Sidebar* interativa acessível de qualquer tela.
 4.  **Checkout em Etapas (Stepper):** Formulário dividido em Entrega e Pagamento, com validações de campos obrigatórios antes do envio do pedido (POST) para a API.
+
+## 🧪 Testes
+
+Cobri o fluxo completo de compra, da listagem até a confirmação do pedido, com um teste E2E em Cypress, usando fixtures e interceptação de chamadas GET e POST. Resultado: validação automatizada da jornada do usuário, sem dependência da API em produção.
 
 ## 📂 Estrutura de Arquivos
 
@@ -59,3 +59,4 @@ efood/
 │   └── index.tsx        # Ponto de entrada (Entry Point)
 ├── package.json         # Dependências do projeto
 └── tsconfig.json        # Configurações do TypeScript compilador
+```
