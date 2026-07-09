@@ -7,9 +7,13 @@
 
 # testing
 /coverage
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
 
 # production
 /build
+Prompts
 
 # misc
 .DS_Store

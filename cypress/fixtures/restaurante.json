@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "titulo": "Tia Nastácia",
+  "destacado": true,
+  "tipo": "Brasileira",
+  "avaliacao": 4.8,
+  "descricao": "A gente também gosta de um bom prato caseiro por aqui.",
+  "capa": "https://cypress-fixture.local/capa-tia-nastacia.png",
+  "cardapio": [
+    {
+      "id": 101,
+      "foto": "https://cypress-fixture.local/produto-feijoada.png",
+      "nome": "Feijoada",
+      "descricao": "Feijoada completa com acompanhamentos tradicionais.",
+      "porcao": "500g",
+      "preco": 45.9
+    },
+    {
+      "id": 102,
+      "foto": "https://cypress-fixture.local/produto-moqueca.png",
+      "nome": "Moqueca",
+      "descricao": "Moqueca de peixe com arroz e pirão.",
+      "porcao": "400g",
+      "preco": 39.9
+    }
+  ]
+}

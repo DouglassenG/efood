@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tia Nastácia",
+    "destacado": true,
+    "tipo": "Brasileira",
+    "avaliacao": 4.8,
+    "descricao": "A gente também gosta de um bom prato caseiro por aqui.",
+    "capa": "https://cypress-fixture.local/capa-tia-nastacia.png",
+    "cardapio": []
+  },
+  {
+    "id": 2,
+    "titulo": "Papa Quente",
+    "destacado": false,
+    "tipo": "Italiana",
+    "avaliacao": 4.5,
+    "descricao": "A melhor pizza da cidade, direto do forno a lenha.",
+    "capa": "https://cypress-fixture.local/capa-papa-quente.png",
+    "cardapio": []
+  }
+]
